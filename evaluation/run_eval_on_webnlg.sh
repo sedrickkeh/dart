@@ -1,15 +1,15 @@
 #! /bin/bash
 
-OUTPUT_FILE=example/bart_webnlg.txt
+OUTPUT_FILE=content/dart/evaluation/example/bart_webnlg.txt
 export TEAMR=team
 
 echo $OUTPUT_FILE
 echo $TEAMR
 
-cp $OUTPUT_FILE ./webnlg-automatic-evaluation/submissions/$TEAMR.txt
+cp $OUTPUT_FILE content/dart/evaluation/webnlg-automatic-evaluation/submissions/$TEAMR.txt
 
 # BLEU
-cd webnlg-automatic-evaluation/
+cd content/dart/evaluation/webnlg-automatic-evaluation/
 python evaluation.py $TEAMR
 . bleu_eval_3ref.sh
 cd ..
