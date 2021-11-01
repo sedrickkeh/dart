@@ -20,7 +20,7 @@ echo "SEEN:"; cat webnlg-automatic-evaluation/eval/bleu3ref-$TEAMR\_old-cat.txt 
 echo "UNSEEN:"; cat webnlg-automatic-evaluation/eval/bleu3ref-$TEAMR\_new-cat.txt > bleu_unseen.txt
 
 # METEOR
-cd meteor-1.5/ 
+cd content/dart/evaluation/meteor-1.5/ 
 ../webnlg-automatic-evaluation/meteor_eval.sh 
 
 cd ..
@@ -31,7 +31,7 @@ echo "SEEN:"; cat webnlg-automatic-evaluation/eval/meteor-$TEAMR-old-cat.txt > m
 echo "UNSEEN:"; cat webnlg-automatic-evaluation/eval/meteor-$TEAMR-new-cat.txt > meteor_unseen.txt
 
 # TER
-cd tercom-0.7.25/
+cd content/dart/evaluation/meteor-1.5/tercom-0.7.25/
 ../webnlg-automatic-evaluation/ter_eval.sh 
 cd ..
 echo "ALL:"; cat webnlg-automatic-evaluation/eval/ter3ref-$TEAMR-all-cat.txt > ter_all.txt
